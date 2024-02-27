@@ -89,7 +89,7 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(253, 232, 180, 0.85);
+  background: rgba(211, 211, 211, 1);
   padding: 12px;
 }
 
@@ -493,21 +493,25 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  #hero h1,h2 {
+    justify-content: center;
+  }
+  
   #hero h1 {
     font-size: 36px;
-    line-height: 42px;
-    letter-spacing: 10px;
+    line-height: 10px;
+    letter-spacing: 12px;
     font-weight: 900;
-    padding-bottom: 20px;
-    text-shadow: -1px 0 2px #2f4d5a;
+    padding-bottom: 5px;
+    text-shadow: -3px 0 5px #1D2150;
   }
 
   #hero h2 {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 20px;
+    line-height: 22px;
     font-weight: 300;
-    margin-bottom: 20px;
-    text-shadow: -1px 0 2px #2f4d5a;
+    margin-top: 20px;
+    text-shadow: -3px 0 5px #1D2150;
   }
 
   #hero img {
@@ -533,15 +537,15 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 .section-title h2 {
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 700;
   position: relative;
-  margin-bottom: 30px;
-  color: #2f4d5a;
+  margin-bottom: 20px;
+  color: #1D2150;
   z-index: 2;
   text-transform: uppercase;
 }
@@ -558,7 +562,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(253, 232, 180, 0.3), rgba(253, 232, 180, 1));
+  background-color: rgba(192, 192, 192, 0.3);
   border-radius: 50px;
   padding: 2px 15px;
   z-index: -1;
@@ -765,7 +769,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background: rgba(253, 232, 180, 0.5);
+  background: rgba(192, 192, 192, 0.2);
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -775,7 +779,7 @@ section {
   display: inline-block;
   padding: 10px 15px 8px 15px;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1;
   text-transform: uppercase;
   color: rgba(23, 33, 80, 0.4);
