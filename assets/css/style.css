@@ -499,18 +499,18 @@ h6 {
   
   #hero h1 {
     font-size: 36px;
-    line-height: 10px;
-    letter-spacing: 12px;
+    line-height: 42px;
+    letter-spacing: 10px;
     font-weight: 900;
-    padding-bottom: 5px;
+    padding-bottom: 20px;
     text-shadow: -3px 0 5px #1D2150;
   }
 
   #hero h2 {
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 16px;
+    line-height: 26px;
     font-weight: 300;
-    margin-top: 20px;
+    margin-bottom: 20px;
     text-shadow: -3px 0 5px #1D2150;
   }
 
@@ -639,6 +639,12 @@ section {
   bottom: 0;
   background: rgba(255, 255, 255, 0.75);
   z-index: 9;
+}
+
+.about .member {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
 }
 
 .about .container {
