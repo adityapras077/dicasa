@@ -2,7 +2,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: Cinzel , serif;
+  /* font-family: Cinzel , serif; */
+  font-family: "Poppins", sans-serif;
   color: #444444;
   background-image: url(../img/flow-bg.jpg);
   background-repeat: repeat;
@@ -90,6 +91,7 @@ h6 {
 
 #header.header-scrolled {
   background: rgba(211, 211, 211, 0.85);
+  backdrop-filter: blur(5px);
   padding: 12px;
 }
 
@@ -99,7 +101,6 @@ h6 {
   line-height: 1;
   font-weight: 700;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
 
 #header .logo h1 a,
@@ -162,7 +163,6 @@ h6 {
   font-size: 14px;
   line-height: 0;
   margin-left: 5px;
-  text-transform: uppercase;
 }
 
 .navbar a:hover,
@@ -436,8 +436,8 @@ h6 {
 
 #hero .hero-content h1,
 #hero .hero-content h2 {
-  font-family: "Cinzel", serif;
-  font-weight: 500;
+  /* font-family: "Cinzel", serif; */
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   margin: 0;
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8); /* Offset X, offset Y, blur radius, dan warna bayangan */
@@ -472,6 +472,7 @@ h6 {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
+  font-style: italic;
   text-shadow: -1px 0 2px #2f4d5a;
 }
 
