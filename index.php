@@ -66,7 +66,7 @@
             <div class="video-overlay"></div>
             <iframe
                 class="responsive-iframe"
-                src="https://www.youtube.com/embed/gOgPsIN9vs4?playlist=gOgPsIN9vs4&autoplay=1&loop=1&controls=0&mute=1"
+                src="https://www.youtube.com/embed/kG_2xzGRbmo?si=pQBIGzAPxL4KglR-&amp;start=7&autoplay=1&loop=1&controls=0&mute=1&amp;enablejsapi=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -75,13 +75,14 @@
         </div>
     </section>
     <main id="main">
+
     <section id="portfolio" class="portfolio">
     <div class="container">
-        <div class="section-title m-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="elfsight-crop-bottom section-title m-4" data-aos="fade-up" data-aos-delay="100">
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div class="elfsight-app-7fe8c6dd-3bfe-4fa1-bbce-4269d4a798c8" data-elfsight-app-lazy></div>
         </div>
-        <!--<div class="row" data-aos="fade-up" data-aos-delay="100">
+        <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
             <?php
             // Lokasi file JSON
             $projectDataFile = 'projectDatas.json';
@@ -126,9 +127,9 @@
                 echo '<p class="text-center">Tidak ada proyek yang ditemukan.</p>';
             }
             ?>
-        </div>-->
+        </div> -->
     </div>
-</section>
+    </section>
 
 <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered">

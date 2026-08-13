@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Mr. F",
+    "role": "Direktur Utama",
+    "image": "assets/img/team/Direktur.jpg",
+    "delay": 0
+  },
+  {
+    "name": "Mr. F",
+    "role": "Direktur",
+    "image": "assets/img/team/Manager.jpg",
+    "delay": 150
+  },
+  {
+    "name": "Miss. A",
+    "role": "Assisten Direktur",
+    "image": "assets/img/team/Specialis.jpg",
+    "delay": 150
+  },
+  {
+    "name": "Miss. A",
+    "role": "Planner",
+    "image": "assets/img/team/Specialis.jpg",
+    "delay": 300
+  }
+]

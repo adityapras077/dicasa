@@ -219,6 +219,32 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Elfisight Widget Customization
+--------------------------------------------------------------*/
+
+/* Untuk Tampilan Desktop */
+.elfsight-crop-bottom {
+    position: relative;
+    width: 100%;
+    max-height: 385px; /* Batas tinggi desktop */
+    overflow: hidden;
+}
+
+/* 2. Tablet Mode (768px sampai 1024px - iPad & Android Tablet) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .elfsight-crop-bottom {
+        max-height: 305px !important; /* Adjust tinggi khusus tablet */
+    }
+}
+
+/* 3. Mobile Mode (< 768px - Smartphone) */
+@media (max-width: 767px) {
+    .elfsight-crop-bottom {
+        max-height: 275px !important; /* Adjust tinggi khusus mobile */
+    }
+}
+
+/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {

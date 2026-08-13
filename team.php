@@ -143,86 +143,52 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-            <div class="member" data-aos="fade-up">
-              <div class="pic">
-                <img
-                  src="assets/img/team/Direktur.jpg"
-                  class="img-fluid"
-                  alt="" />
-              </div>
-              <div class="member-info">
-                <h4>Mr. F</h4>
-                <span>Direktur Utama</span>
-                <!-- <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div> -->
-              </div>
-            </div>
-          </div>
+          <?php
+          $teamFile = 'team.json';
 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-            <div class="member" data-aos="fade-up" data-aos-delay="150">
-              <div class="pic">
-                <img
-                  src="assets/img/team/Manager.jpg"
-                  class="img-fluid"
-                  alt="" />
-              </div>
-              <div class="member-info">
-                <h4>Mr. F</h4>
-                <span>Direktur</span>
-              </div>
-            </div>
-          </div>
+          if (file_exists($teamFile)) {
+              $teamData = json_decode(file_get_contents($teamFile), true) ?? [];
 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-            <div class="member" data-aos="fade-up" data-aos-delay="150">
-              <div class="pic">
-                <img
-                  src="assets/img/team/Specialis.jpg"
-                  class="img-fluid"
-                  alt="" />
-              </div>
-              <div class="member-info">
-                <h4>Miss. A</h4>
-                <span>Assisten Direktur</span>
-              </div>
-            </div>
-          </div>
+              if (!empty($teamData)) {
+                  $autoDelay = 0;
+                  
+                  foreach ($teamData as $member) {
+                      $name  = htmlspecialchars($member['name'] ?? 'No Name');
+                      $role  = htmlspecialchars($member['role'] ?? '');
+                      $image = htmlspecialchars($member['image'] ?? 'assets/img/team/default.jpg');
+                      
+                      // Menggunakan delay dari JSON jika ada, atau bertambah 150ms secara otomatis
+                      $aosDelay = isset($member['delay']) ? (int)$member['delay'] : $autoDelay;
+                      ?>
+                      
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-6">
+                        <div class="member" data-aos="fade-up" data-aos-delay="<?= $aosDelay ?>">
+                          <div class="pic">
+                            <img src="<?= $image ?>" class="img-fluid" alt="<?= $name ?>" />
+                          </div>
+                          <div class="member-info">
+                            <h4><?= $name ?></h4>
+                            <span><?= $role ?></span>
+                          </div>
+                        </div>
+                      </div>
 
-          <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="pic">
-                <img
-                  src="assets/img/team/Specialis.jpg"
-                  class="img-fluid"
-                  alt="" />
-              </div>
-              <div class="member-info">
-                <h4>Miss. A</h4>
-                <span>Planner</span>
-              </div>
-            </div>
-          </div>
+                      <?php
+                      $autoDelay += 150;
+                  }
+              } else {
+                  echo '<p class="text-center">Data tim tidak ditemukan atau format JSON kosong.</p>';
+              }
+          } else {
+              echo '<p class="text-center">File team.json tidak ditemukan.</p>';
+          }
+          ?>
         </div>
-        
-        <div
-          class="mx-auto pembatas"
-          data-aos="fade-up"
-          data-aos-delay="300"></div>
-
-        <br />
-      </div>
     </section>
     <!-- End Team Section -->
-  </main>
+</main>
   <!-- End #main -->
 
-  <!-- ======= Footer ======= -->
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="col-12 text-center text-white">
