@@ -6037,6 +6037,38 @@ textarea.form-control-lg {
   clear: both;
   content: "";
 }
+.carousel-inner .carousel-item img.d-block.w-100.img-fluid {
+  object-fit: contain; /* Atau gunakan 'cover' sesuai preferensi Anda */
+  height: 500dvh; /* Atur ketinggian tetap untuk semua slide */
+  width: 100%; /* Biarkan lebar menyesuaikan dengan rasio aspek */
+  margin: 0 auto; /* Untuk memusatkan gambar secara horizontal jika menggunakan 'contain' */
+}
+
+/* Jika Anda menggunakan 'cover', Anda mungkin tidak perlu margin: 0 auto; */
+.carousel-inner .carousel-item.active > img {
+  object-fit: contain; /* Pastikan juga diterapkan pada slide aktif */
+  height: 500dvh;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel-image-container {
+  height: 500dvh; /* Atur ketinggian tetap */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Atau 'cover' sesuai preferensi */
+}
+
+.carousel-inner img {
+  object-fit: contain;
+  height: 500dvh;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner img {
+    height: 250dvh;
+  }
+}
 
 .carousel-item {
   position: relative;
@@ -6046,7 +6078,7 @@ textarea.form-control-lg {
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 3s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-item {
@@ -6110,7 +6142,7 @@ textarea.form-control-lg {
   background: none;
   border: 0;
   opacity: 0.5;
-  transition: opacity 0.15s ease;
+  transition: opacity 0.25s ease;
 }
 @media (prefers-reduced-motion: reduce) {
   .carousel-control-prev,

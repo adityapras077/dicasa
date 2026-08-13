@@ -1,0 +1,116 @@
+[
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-6",
+        "title": "Renovasi Apartemen Mewah",
+        "owner": "Ibu Sinta",
+        "date": "2025-04-27",
+        "description": "Renovasi total apartemen dengan material mewah.",
+        "design_note": "Fokus pada detail dan kenyamanan.",
+        "image": [
+            "halamandepan3.jpg",
+            "halamandepan2.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+    },
+    {
+        "id": "project-7",
+        "title": "Test",
+        "owner": "Pertama",
+        "date": "2025-01-01",
+        "description": "testing",
+        "design_note": "testing",
+        "image": [
+            "no-image.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/shorts\/ss9hKHdrCis"
+    },
+    {
+        "id": "project-8",
+        "title": "Test",
+        "owner": "Pertama",
+        "date": "2025-01-01",
+        "description": "testing",
+        "design_note": "testing",
+        "image": [
+            "no-image.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/shorts\/ss9hKHdrCis"
+    },
+    {
+        "id": "project-9",
+        "title": "Test",
+        "owner": "Kedua",
+        "date": "2025-12-31",
+        "description": "Testing",
+        "design_note": "Testing",
+        "image": [
+            "no-image.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/example"
+    }
+]

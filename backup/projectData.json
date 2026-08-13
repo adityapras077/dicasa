@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Project 1",
+    "thumbnail": "assets/img/portfolio/a1.jpg",
+    "youtube": "https://www.youtube.com/watch?v=_gMwxFmomaU"
+  },
+  {
+    "title": "Project 2",
+    "thumbnail": "path/to/thumbnail2.jpg",
+    "youtube": "https://www.youtube.com/watch?v=_gMwxFmomaU"
+  },
+  {
+    "title": "Project 3",
+    "thumbnail": "path/to/thumbnail3.jpg",
+    "youtube": "https://www.youtube.com/watch?v=_gMwxFmomaU"
+  }
+]

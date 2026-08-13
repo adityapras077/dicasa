@@ -1,0 +1,149 @@
+{
+  "bermain.jpg": {
+      "title": "Project Interior",
+      "owner": "John Doe",
+      "description": "This is the first project.",
+      "design_note": "Some design notes here.",
+      "youtube": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  },
+  "bioskop.jpg": {
+      "title": "Project Interior",
+      "owner": "Jane Smith",
+      "description": "This is the second project.",
+      "design_note": "Another design note.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "dapur1.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the third project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "dapur2.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the four project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "exterior1.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the five project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "halamandepan2.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the six project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "halamandepan3.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the seven project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "halamandepan4.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the eight project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "halamandepan10.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the nine project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "interior1.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the ten project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "interior2.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the eleven project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "interior3.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the twelve project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "kamarmandi.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the thirdteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "kamartidur.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the fourteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "kerja1.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the fiveteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "kerja2.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the sixteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "kolam.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the seventeen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "ruangtengah1.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the eightteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "ruangtengah2.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the nineteen project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "ruangtengah3.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the twenty project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  },
+  "ruangtengah4.jpg": {
+      "title": "Project Interior",
+      "owner": "Alice Johnson",
+      "description": "This is the twenty one project.",
+      "design_note": "Additional design details.",
+      "youtube": "https://www.youtube.com/watch?v=kG_2xzGRbmo"
+  }
+}
