@@ -42,33 +42,6 @@
 </head>
 
 <style>
-  /* Make page a column flex layout so footer sticks to bottom when content is short */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  /* Let main grow to fill available space */
-  main {
-    flex: 1 0 auto;
-  }
-
-  /* Header and footer should not stretch */
-  #header {
-    flex: 0 0 auto;
-  }
-  #footer {
-    flex-shrink: 0;
-  }
-
-  /* Keep responsive behaviour already present */
   @media (max-width: 640px) {
     .navbar {
       margin-bottom: 0rem;
@@ -77,16 +50,6 @@
     #main-navbar {
       margin-bottom: 0rem;
     }
-  }
-
-  /* Ensure the maintenance image behaves responsively and won't force layout overflow */
-  .section-title img {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 </style>
 
@@ -132,18 +95,265 @@
     <section id="portfolio" class="portfolio">
     <div class="container">
         <div class="section-title m-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="container">
-              <img src="https://static.vecteezy.com/system/resources/thumbnails/016/462/237/small/website-under-construction-illustration-concept-on-white-background-vector.jpg" 
-                  alt="Website Under Maintenance Illustration" style="max-width: 500px; width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto;"/>
-              <h2>Website Sedang Dalam Perbaikan</h2>
-              <p>Mohon maaf atas ketidaknyamanannya. Kami sedang melakukan maintenance untuk meningkatkan performa situs.<br>
-                Silakan kembali lagi nanti. Terima kasih atas kesabaran Anda!</p>
-            </div>
+            <h2>All Projects</h2>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <?php
+            // Lokasi file JSON
+            $projectDataFile = 'projectDatas.json';
+
+            // Periksa apakah file JSON tersedia
+            if (file_exists($projectDataFile)) {
+                $projectData = json_decode(file_get_contents($projectDataFile), true) ?? [];
+                if ($projectData === null) {
+                    die('Error: Tidak dapat membaca atau mem-parsing projectData.json');
+                }
+            } else {
+                die('Error: File projectData.json tidak ditemukan');
+            }
+
+            // Urutkan data proyek berdasarkan tanggal secara descending
+            usort($projectData, function ($a, $b) {
+                return strtotime($b['date']) - strtotime($a['date']);
+            });
+
+            // Tampilkan daftar proyek tanpa batasan (semua proyek ditampilkan)
+            if (!empty($projectData)) {
+                foreach ($projectData as $project) {
+                    $imagePath = 'assets/img/portfolio/';
+                    $thumbnailImage = isset($project['image'][0]) ? $imagePath . htmlspecialchars($project['image'][0]) : 'assets/img/no-image.jpg'; // Tampilkan gambar pertama sebagai thumbnail, atau gambar pengganti jika tidak ada
+
+                    $formattedDate = date("Y-m-d", strtotime($project['date']));
+
+                    echo '<div class="col-lg-3 col-md-4 col-sm-6 mb-4 project-item" data-project-id="' . htmlspecialchars($project['id']) . '">';
+                    echo '   <a href="#" class="portfolio-link" data-bs-toggle="modal" data-bs-target="#projectModal">';
+                    echo '       <img src="' . htmlspecialchars($thumbnailImage) . '" class="img-fluid" alt="' . htmlspecialchars($project['title']) . '" loading="lazy">';
+                    echo '       <div class="portfolio-info">';
+                    echo '           <h4>' . htmlspecialchars($project['title']) . '</h4>';
+                    echo '           <p>' . $formattedDate . '</p>';
+                    echo '       </div>';
+                    echo '   </a>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p class="text-center">Tidak ada proyek yang ditemukan.</p>';
+            }
+            ?>
         </div>
     </div>
-</section>
+    </section>
 
-  <!-- End Portfolio Section -->
+<div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"  data-aos-delay="100">
+        <h4 id="modal-title"></h4>
+        <p><strong>Owner:</strong> <span id="modal-owner"></span></p>
+        <p><strong>Date Project:</strong> <span id="modal-date"></span></p>
+        <p id="modal-description"></p>
+        <p><strong>Notes:</strong> <span id="modal-notes"></span></p>
+
+        <div id="projectCarousel" class="carousel slide mb-3">
+          <div class="carousel-inner" id="carousel-inner"></div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const projectItems = document.querySelectorAll('.project-item');
+    const modalTitle = document.getElementById('modal-title');
+    const modalOwner = document.getElementById('modal-owner');
+    const modalDate = document.getElementById('modal-date');
+    const modalDescription = document.getElementById('modal-description');
+    const modalNotes = document.getElementById('modal-notes');
+    const carouselInner = document.getElementById('carousel-inner');
+    const projectCarouselElement = document.getElementById('projectCarousel');
+    const projectModal = document.getElementById('projectModal');
+
+    const projectData = <?php echo json_encode($projectData); ?>;
+
+    projectItems.forEach(item => {
+        item.addEventListener('click', function () {
+        const projectId = this.dataset.projectId;
+        const selectedProject = projectData.find(p => p.id === projectId);
+        if (!selectedProject) return;
+
+        // Isi data teks
+        modalTitle.textContent = selectedProject.title || '';
+        modalOwner.textContent = selectedProject.owner || '';
+        modalDate.textContent = new Date(selectedProject.date).toLocaleDateString();
+        modalDescription.textContent = selectedProject.description || '';
+        modalNotes.textContent = selectedProject.design_note || '';
+
+        // Reset carousel
+        carouselInner.innerHTML = '';
+
+        let isFirst = true;
+
+        // Tambahkan gambar ke carousel
+        (selectedProject.image || []).forEach(img => {
+            const item = document.createElement('div');
+            item.className = 'carousel-item' + (isFirst ? ' active' : '');
+            const imgTag = document.createElement('img');
+            imgTag.src = 'assets/img/portfolio/' + img;
+            imgTag.className = 'd-block w-100 rounded shadow-sm';
+            imgTag.alt = 'Project Image';
+            item.appendChild(imgTag);
+            carouselInner.appendChild(item);
+            isFirst = false;
+        });
+
+        // Tambahkan video jika ada
+        if (selectedProject.youtube) {
+            const item = document.createElement('div');
+            item.className = 'carousel-item' + (isFirst ? ' active' : '');
+            const ratioDiv = document.createElement('div');
+            ratioDiv.className = 'ratio ratio-16x9';
+            const iframe = document.createElement('iframe');
+            iframe.src = selectedProject.youtube + '?autoplay=0&loop=0&controls=1';
+            iframe.allowFullscreen = true;
+            iframe.title = 'YouTube video';
+            ratioDiv.appendChild(iframe);
+            item.appendChild(ratioDiv);
+            carouselInner.appendChild(item);
+        }
+
+        // Re-init carousel
+        const bsInstance = bootstrap.Carousel.getInstance(projectCarouselElement);
+        if (bsInstance) bsInstance.dispose();
+        new bootstrap.Carousel(projectCarouselElement, { interval: true });
+        });
+    });
+
+    projectModal.addEventListener('hidden.bs.modal', function () {
+        // Optional: Bersihkan iframe agar video berhenti
+        carouselInner.querySelectorAll('iframe').forEach(iframe => {
+        iframe.src = iframe.src;
+        });
+
+        const bsCarousel = bootstrap.Carousel.getInstance(projectCarouselElement);
+        if (bsCarousel) bsCarousel.dispose();
+    });
+    });
+</script> -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const projectItems = document.querySelectorAll('.project-item');
+    const modalTitle = document.getElementById('modal-title');
+    const modalOwner = document.getElementById('modal-owner');
+    const modalDate = document.getElementById('modal-date');
+    const modalDescription = document.getElementById('modal-description');
+    const modalNotes = document.getElementById('modal-notes');
+    const carouselInner = document.getElementById('carousel-inner');
+    const projectCarouselElement = document.getElementById('projectCarousel');
+    const projectModal = document.getElementById('projectModal');
+
+    const projectData = <?php echo json_encode($projectData); ?>;
+
+    // Fungsi konversi URL YouTube otomatis
+    function getYoutubeEmbedUrl(url) {
+    if (!url) return '';
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+    const match = url.match(regExp);
+
+    if (match && match[2].length === 11) {
+        const videoId = match[2];
+        // Tambahkan loop=1 dan playlist=${videoId} agar video terus mengulang
+        return `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&disablekb=1&enablejsapi=1&loop=1&playlist=${videoId}`;
+    }
+        return url;
+    }
+
+    projectItems.forEach(item => {
+        item.addEventListener('click', function () {
+        const projectId = this.dataset.projectId;
+        const selectedProject = projectData.find(p => p.id === projectId);
+        if (!selectedProject) return;
+
+        // Isi data teks
+        modalTitle.textContent = selectedProject.title || '';
+        modalOwner.textContent = selectedProject.owner || '';
+        modalDate.textContent = new Date(selectedProject.date).toLocaleDateString();
+        modalDescription.textContent = selectedProject.description || '';
+        modalNotes.textContent = selectedProject.design_note || '';
+
+        // Reset isi carousel
+        carouselInner.innerHTML = '';
+
+        let isFirst = true;
+
+        // Tambahkan gambar ke carousel
+        (selectedProject.image || []).forEach(img => {
+            const item = document.createElement('div');
+            item.className = 'carousel-item' + (isFirst ? ' active' : '');
+            const imgTag = document.createElement('img');
+            imgTag.src = 'assets/img/portfolio/' + img;
+            imgTag.className = 'd-block w-100 rounded shadow-sm';
+            imgTag.alt = 'Project Image';
+            item.appendChild(imgTag);
+            carouselInner.appendChild(item);
+            isFirst = false;
+        });
+
+        // Tambahkan video jika ada
+        // 2. Di bagian pembuat iframe (di dalam event click projectItems):
+        if (selectedProject.youtube) {
+            const item = document.createElement('div');
+            item.className = 'carousel-item' + (isFirst ? ' active' : '');
+            const ratioDiv = document.createElement('div');
+            ratioDiv.className = 'ratio ratio-16x9 position-relative overflow-hidden';
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = getYoutubeEmbedUrl(selectedProject.youtube);
+            iframe.allow = 'autoplay; encrypted-media';
+            iframe.allowFullscreen = true;
+            iframe.title = 'YouTube video';
+            
+            // Kunci utama agar video TIDAK BISA DIKLIK sama sekali:
+            iframe.style.pointerEvents = 'none'; 
+            iframe.style.scale = '1.05'; // Opsional: Sedikit perbesar untuk menyembunyikan sisa watermark kecil jika ada
+
+            ratioDiv.appendChild(iframe);
+            item.appendChild(ratioDiv);
+            carouselInner.appendChild(item);
+        }
+
+        // Re-init Bootstrap Carousel
+        const bsInstance = bootstrap.Carousel.getInstance(projectCarouselElement);
+        if (bsInstance) bsInstance.dispose();
+        new bootstrap.Carousel(projectCarouselElement, { interval: false });
+        });
+    });
+
+    // Reset iframe saat modal ditutup agar video berhenti total
+    projectModal.addEventListener('hidden.bs.modal', function () {
+        carouselInner.innerHTML = '';
+        const bsCarousel = bootstrap.Carousel.getInstance(projectCarouselElement);
+        if (bsCarousel) bsCarousel.dispose();
+    });
+});
+</script>
+
+    <!-- End Portfolio Section -->
   </main>
   <!-- End #main -->
 

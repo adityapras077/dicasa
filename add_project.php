@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $filePath = 'projectDatas.json';
         $currentData = json_decode(file_get_contents($filePath), true) ?? [];
 
-        $uploadDir = 'uploads/';
+        $uploadDir = 'assets/img/portfolio/';
         $imageNames = [];
         $uploadErrors = [];
 
@@ -41,15 +41,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $nextId = "project-" . (count($currentData) + 1);
 
+            if (empty($imageNames)) {
+                $imageNames = ['dicasa.jpg'];
+            }
+
             $newData = [
-                'id'           => $nextId,
-                'title'        => trim($_POST['title']),
-                'owner'        => trim($_POST['owner']),
-                'date'         => trim($_POST['date']),
-                'description'  => trim($_POST['description']),
-                'design_note'  => trim($_POST['design_note'] ?? ''),
-                'image'        => $imageNames,
-                'youtube'      => trim($_POST['youtube'] ?? '')
+                'id'          => $nextId,
+                'title'       => trim($_POST['title']),
+                'owner'       => trim($_POST['owner']),
+                'date'        => trim($_POST['date']),
+                'description' => trim($_POST['description']),
+                'design_note' => trim($_POST['design_note'] ?? ''),
+                'image'       => $imageNames, // Otomatis berisi ['dicasa.jpg'] jika tidak ada foto diinput
+                'youtube'     => trim($_POST['youtube'] ?? '')
             ];
 
             if (!empty($newData['youtube']) && !filter_var($newData['youtube'], FILTER_VALIDATE_URL)) {
@@ -125,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <form action="" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                                 <label for="image" class="form-label">Upload Gambar Proyek (boleh lebih dari 1)</label>
-                                <input type="file" class="form-control" id="image" name="image[]" multiple required>
+                                <input type="file" class="form-control" id="image" name="image[]" multiple>
                                 <small class="text-muted">Dapat menyimpan banyak gambar</small>
                             </div>
                             <div class="mb-3" id="imagePreview" style="display: flex; flex-wrap: wrap; gap: 10px;"></div>

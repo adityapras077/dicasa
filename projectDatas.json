@@ -1,116 +1,182 @@
 [
     {
-        "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
+        "id": "project-1",
+        "title": "Interior Apartment project",
+        "owner": "Mr Ridwan",
+        "date": "2015-11-07",
+        "description": "Mr. Ridwan Apartment at Amarta Pura -  Lippo Karawaci Tangerang.",
+        "design_note": "\"Design is not just what it looks like and feels like. Design is how it works. So, make your home as comfortable and attractive as possible and then get on with living. There\u2019s more to life than decorating.\"",
         "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
+            "dapur1.jpg"
         ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+        "youtube": "https:\/\/www.youtube.com\/watch?v=bY_Bf0gozx8"
+    },
+    {
+        "id": "project-2",
+        "title": "LYDON - NAVAPARK residence",
+        "owner": "Mr. A",
+        "date": "2026-03-14",
+        "description": "\"Every great design begins with an even better story.\"",
+        "design_note": "DICASA - Interior Residence project",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=nGaXWNZU5b8"
+    },
+    {
+        "id": "project-3",
+        "title": "Sinar Dharma School",
+        "owner": "Yayasan Pendidikan Sinar Dharma",
+        "date": "2022-07-25",
+        "description": "We Design Every Detail",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=gOgPsIN9vs4?start=10"
+    },
+    {
+        "id": "project-4",
+        "title": "Karaoke Room",
+        "owner": "Dicasa Client",
+        "date": "2022-07-25",
+        "description": "\"Architecture is basically the design of interiors, the art of organizing interior space\"",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=NQX7n7lrms4"
+    },
+    {
+        "id": "project-5",
+        "title": "Japanese Design Apartment",
+        "owner": "Yukata Suites Two Bedroom",
+        "date": "2022-07-25",
+        "description": "We Design Every Detail",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=_gMwxFmomaU"
     },
     {
         "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
+        "title": "Japanese Design Apartment",
+        "owner": "Yukata Suites Two Bedroom",
+        "date": "2022-07-25",
+        "description": "We Design Every Detail",
+        "design_note": "",
         "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
+            "dicasa.jpg"
         ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
-    },
-    {
-        "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
-        "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
-        ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
-    },
-    {
-        "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
-        "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
-        ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
-    },
-    {
-        "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
-        "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
-        ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
-    },
-    {
-        "id": "project-6",
-        "title": "Renovasi Apartemen Mewah",
-        "owner": "Ibu Sinta",
-        "date": "2025-04-27",
-        "description": "Renovasi total apartemen dengan material mewah.",
-        "design_note": "Fokus pada detail dan kenyamanan.",
-        "image": [
-            "halamandepan3.jpg",
-            "halamandepan2.jpg"
-        ],
-        "youtube": "https:\/\/www.youtube.com\/embed\/your_video_id_2"
+        "youtube": "https:\/\/www.youtube.com\/watch?v=_gMwxFmomaU"
     },
     {
         "id": "project-7",
-        "title": "Test",
-        "owner": "Pertama",
-        "date": "2025-01-01",
-        "description": "testing",
-        "design_note": "testing",
+        "title": "Mr. C+ Residence",
+        "owner": "Dicasa Client",
+        "date": "2022-03-08",
+        "description": "\"Every great design begins with an even better story.\"",
+        "design_note": "",
         "image": [
-            "no-image.jpg"
+            "dicasa.jpg"
         ],
-        "youtube": "https:\/\/www.youtube.com\/shorts\/ss9hKHdrCis"
+        "youtube": "https:\/\/www.youtube.com\/watch?v=kG_2xzGRbmo"
     },
     {
         "id": "project-8",
-        "title": "Test",
-        "owner": "Pertama",
-        "date": "2025-01-01",
-        "description": "testing",
-        "design_note": "testing",
+        "title": "Mardova Residence",
+        "owner": "Mrs. Jovanka",
+        "date": "2018-06-16",
+        "description": "\" Architecture is basically the design of interiors, the art of organizing interior space \"",
+        "design_note": "",
         "image": [
-            "no-image.jpg"
+            "dicasa.jpg"
         ],
-        "youtube": "https:\/\/www.youtube.com\/shorts\/ss9hKHdrCis"
+        "youtube": "https:\/\/www.youtube.com\/watch?v=CLl-4REsndc"
     },
     {
         "id": "project-9",
-        "title": "Test",
-        "owner": "Kedua",
-        "date": "2025-12-31",
-        "description": "Testing",
-        "design_note": "Testing",
+        "title": "Yossava's Office",
+        "owner": "Dicasa Client",
+        "date": "2018-05-01",
+        "description": "Altira Business Park - Kelapa Gading",
+        "design_note": "",
         "image": [
-            "no-image.jpg"
+            "dicasa.jpg"
         ],
-        "youtube": "https:\/\/www.youtube.com\/example"
+        "youtube": "https:\/\/www.youtube.com\/watch?v=1aZio4BlN70"
+    },
+    {
+        "id": "project-10",
+        "title": "Apartment Project",
+        "owner": "Mrs. Emilee's",
+        "date": "2017-12-21",
+        "description": "Calia Tower Apartment , Pulomas Jakarta Utara\r\n\u201c Design is not just what it looks like, but is how it works \u201d",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=K1jxHNvP6nU"
+    },
+    {
+        "id": "project-11",
+        "title": "MetroPark Residence Apartment",
+        "owner": "Dicasa Client",
+        "date": "2016-12-17",
+        "description": "\u201c Design is not just what it looks like, but is how it works \u201d",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=F3fhTBIxWPw"
+    },
+    {
+        "id": "project-12",
+        "title": "Mrs. Elly's Residence",
+        "owner": "Mrs. Elly's",
+        "date": "2016-09-17",
+        "description": "Batam Center Residence - 78 , Batam\r\n\u201c Good design is making something intelligible and memorable. Great design is making something memorable and meaningful \u201d",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=vwLwjX9a0hg"
+    },
+    {
+        "id": "project-13",
+        "title": "Mrs. Joeli's Residence",
+        "owner": "Mrs. Joeli's",
+        "date": "2016-07-10",
+        "description": "GreenPuri Residence - 31 , Ciledug Jakarta\r\n\u201cFor a house to be successful, the objects in it must communicate with one another, respond and balance one another.\u201d",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=3K89R_iHMgM"
+    },
+    {
+        "id": "project-14",
+        "title": "Mr. Erwin's Residence",
+        "owner": "Mr. Erwin's",
+        "date": "2016-07-07",
+        "description": "GreenLake City - Europe Cluster Liverpool 8 - 68\r\n\u201cWhen you\u2019re building a room, you\u2019re building character, and character is the strength and wisdom of a home.\u201d",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=Oc7exLX9x44"
+    },
+    {
+        "id": "project-15",
+        "title": "Mr. Elias Residence",
+        "owner": "Mr. Elias",
+        "date": "2016-05-23",
+        "description": "Mr. Elias's Residence at BSD city - Tangerang\r\n\"Design is not just what it looks like and feels like. Design is how it works. So, make your home as comfortable and attractive as possible and then get on with living. There\u2019s more to life than decorating.\"",
+        "design_note": "",
+        "image": [
+            "dicasa.jpg"
+        ],
+        "youtube": "https:\/\/www.youtube.com\/watch?v=ToTHSuaCRnQ"
     }
 ]
